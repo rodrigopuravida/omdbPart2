@@ -89,7 +89,7 @@ data["items"].forEach(function(element){
 
 	if (dictProduct["brand"] == "Canon") {
 
-		if (dictAuthor["name"] == "eBay") {
+		if (dictAuthor["name"].indexOf("eBay") > -1) {
 		console.log("This is a Canon Product & Author is eBay");
 		console.log(element["id"]);
 		}
