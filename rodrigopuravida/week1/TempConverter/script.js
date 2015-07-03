@@ -7,6 +7,7 @@ document.querySelector('#ConverterForm')
   	var inputText = document.querySelector('#Enter_Celsius').value;
   	// var input = inputText.innerText;
      //alert("Does this work " +  inputText);
+
      convertMe(inputText);
     
   });
@@ -16,7 +17,7 @@ document.querySelector('#ConverterForm')
   	e.preventDefault();
   	// var inputText = document.getElementById('Enter_Celsius');
   	document.querySelector('#Enter_Celsius').value='';
-  	
+
     
   });
 
@@ -34,5 +35,19 @@ document.querySelector('#ConverterForm')
     	// document.querySelector('#Enter_Celsius').style.backgroundColor = 'blue';
     }
   }
+
+  document.querySelector('#RadioSelectorForm')
+  .addEventListener('check',function(e){
+  	e.preventDefault();
+  	
+  	//alert("Radio button" + document.getElementById("answer").value);
+
+
+    
+  });
+
+  function check(temperature) {
+    document.getElementById("answer").value=temperature;
+}
 
 })

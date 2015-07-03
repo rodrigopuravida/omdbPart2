@@ -1,0 +1,18 @@
+.page-wrap{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.right-col{
+  /*background: green;*/
+  float:left;
+  width:31%;
+  min-height: 300px;
+}
+
+.left-col{
+  /*background: #9BA0E2;*/
+  float:left;
+  width: 67%;
+  min-height: 300px;
+}
