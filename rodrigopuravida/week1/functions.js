@@ -1,3 +1,5 @@
+//FUNCTIONS LAB
+
 function findOccurences(word){
 
 	var counter = {};
@@ -162,6 +164,7 @@ var chumping2 = function(item) {
 foods.forEach(chumping2);
 
 
+//ITERATOR LAB
 
 
 

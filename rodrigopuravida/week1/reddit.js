@@ -23,10 +23,10 @@ var permaLinksArray = dictChildren["children"].map(function(element){
 
 });
 
+console.log(permaLinksArray);
+
 
 //3 exercise
-
-console.log(permaLinksArray);
 
 
 var postIsEmpty = function(post) {

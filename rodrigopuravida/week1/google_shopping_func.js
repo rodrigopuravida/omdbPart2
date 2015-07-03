@@ -46,7 +46,7 @@ var getItemsByAuthor = function(items, author) {
 	//console.log("Product Inventories");
 	//console.log(dictProduct["inventories"]);
 
-	if (dictAuthor["name"].indexOf(author) > -1) {
+	if (dictAuthor["name"].indexOf(author) > -1){
 		console.log(dictAuthor["name"]);
 		//arrayOfItemsyAuthor.push(element["id"]);
 		arrayOfItemsyAuthor.push(element);
@@ -68,10 +68,13 @@ var getAvailableProducts = function(items) {
 	
 	arrayInventories.forEach(function(element2){
 
-		if (element2["availability"] === "inStock")
+		if (element2["availability"] === "inStock") {
+		console.log('HEY IM AVAILABLE');
+		console.log(element["id"]);
 		console.log(element2["availability"]); 
 			//arrayOfItemsyAvailable.push(element["id"]);	
-			arrayOfItemsyAvailable.push(element);	
+			arrayOfItemsyAvailable.push(element);
+			}	
 		});
 
 	});
@@ -86,27 +89,30 @@ var getAvailableProducts = function(items) {
 //output item count using the getItemsCount function
 //console.log('Item Count: ' + getItemsCount(data));
 //console.log("Item is: " + getItems(data));
-console.log('Brand resuls');
-console.log(getItemsByBrand(getItems(data), "Canon"));
-console.log('Authors resuls');
-console.log(getItemsByAuthor(getItems(data), "Abt Electronics & Appliances"));
-console.log('Available Products');
-console.log(getAvailableProducts(getItems(data)));
+//console.log('Brand resuls');
+//console.log(getItemsByBrand(getItems(data), "Canon"));
+//console.log('Authors resuls');
+//console.log(getItemsByAuthor(getItems(data), "Abt Electronics & Appliances"));
+//console.log('Available Products');
+//console.log(getAvailableProducts(getItems(data)));
 
 
 //All items made by Sony
-console.log('Items made by Sony');
-console.log(getItemsByBrand(getItems(data), "Sony"));
+//.log('Items made by Sony');
+//console.log(getItemsByBrand(getItems(data), "Sony"));
 
 
 //All items made by Sony that are available.
-console.log(getAvailableProducts(getItemsByBrand(getItems(data), "Sony")));
+
+//var SonyItemsAvailable = getItemsByBrand(getItems(data), "Sony");
+//console.log(getAvailableProducts(SonyItemsAvailable));
 
 
 //All available items by the author "Adorama Camera"
 
-var adoromaMade = getItemsByAuthor(getItems(data), "Adorama Camera");
-console.log(getAvailableProducts(adoromaMade));
+//var adoromaMade = getItemsByAuthor(getItems(data), "Adorama Camera");
+//console.log(adoromaMade);
+//console.log(getAvailableProducts(adoromaMade));
 
 
 //All items made by Nikon with the author eBay.
