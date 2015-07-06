@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TIC TAC TOE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+  <div class="page-wrap cf">
+    <h1 class="page-title">Tic Tac Toe</h1>
+    <div class="left-col"> 
+      <img class="space" id="0" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="2" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="4" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="5" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="6" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="7" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      <img class="space" id="8" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310800/blank.png">
+      
+    </div>
+    <div class="right-col">
+      <h3>Settings</h3>
+
+      <form id = "reset-Form">
+        <input type="submit" id = "reset_board" value="Reset Board">
+      </form>
+      <br></br>
+
+      <ul class="side-nav">
+        <li> First Player - Type in X or Y ONLY: </li>
+        <input type="text" value="" name="firstPlayer" id="firstPlayerText">
+        <br></br>
+        <li> Turn Number </li>
+        <input type="text" value="" name="turnNumber" id="turnNumberText">
+        <br></br>
+        <li> WINNER IS</li>
+        <input type="text" value="" name="winner" id="winnerText">
+        <br></br>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
