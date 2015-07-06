@@ -127,6 +127,7 @@ function winnerValidatorDiagonal() {
   var col = 0;
 
   for (var k = 0; k < arraySymbols.length; k++) {
+    winCounter = 0;
     console.log('Im at diagonal verification right to left');
     for (var row = 0; row < 3; row++) {
       if (getPieceAt(row, col) === arraySymbols[k]) {
@@ -142,9 +143,11 @@ function winnerValidatorDiagonal() {
 
     }
   }
-  
-  col = 2;
+ 
+
   for (var l = 0; l < arraySymbols.length; l++) {
+    winCounter = 0;
+    col = 2;
     console.log('Im at diagonal verification lef to right');
     for (var row = 0; row < 3; row++) {
       if (getPieceAt(row, col) === arraySymbols[l]) {
