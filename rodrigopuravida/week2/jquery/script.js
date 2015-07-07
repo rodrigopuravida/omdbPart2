@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   	$('.submit').on('click', function() {
 		var input = $('.input').val();
-	$('.chores-list').append('<li>' + input + '      ' + '<button class="delete" type="button">Alleviate Pain</button></li>' + '<br>');
+	$('.chores-list').append('<li>' + input + '      ' + '<button class="delete" type="button"><span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span></button></li>' + '<br>');
 
 	$('.delete').on('click', function() {
 	 	//jquery function to remove - since li is closest it pretty much chops itseld up.  Thanks classmate PaulD for this. I 
