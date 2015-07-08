@@ -77,7 +77,7 @@ $('#search-form').on('submit',function(e){
   
 
     });
-
+//Animation Test
 $( "#img0" ).animate({
     opacity: 0.25,
     left: "+=50",
