@@ -235,6 +235,10 @@ var spaceClicker = function(){
   //code that call functions
 
   var spaces = document.querySelectorAll('.left-col .space');
+
+  var firstPlayer =  document.querySelector('#firstPlayerText').value;
+
+
   for(var i =0;i < spaces.length; i++){
     //var spaceId = document.getElementsByName(name)
     spaces[i].addEventListener('click',spaceClicker);

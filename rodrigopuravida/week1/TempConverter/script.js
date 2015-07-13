@@ -37,10 +37,14 @@ document.querySelector('#ConverterForm')
   }
 
   document.querySelector('#RadioSelectorForm')
-  .addEventListener('check',function(e){
+  .addEventListener('click',function(e){
   	e.preventDefault();
+    check(document.querySelector('#Enter_Celsius').value);
+
+    var selector = document.getElementById("answer").value;
+    console.log(selector);
   	
-  	//alert("Radio button" + document.getElementById("answer").value);
+  	alert("Radio button" + selector);
 
 
     
