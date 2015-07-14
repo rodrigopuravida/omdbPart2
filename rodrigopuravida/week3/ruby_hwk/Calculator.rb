@@ -10,20 +10,20 @@
 
 def calculator()
 
-	puts "What kind of operation would you like to do - addition, subtraction, multiplication, division"
+	puts "What kind of operation would you like to do - addition, substraction, multiplication, division"
 	choice = gets.chomp
 
 	puts "What is number 1"
-	num_1 = gets.chomp.to_i
+	num_1 = gets.chomp.to_f
 
 	puts "What is number 2"
-	num_2 = gets.chomp.to_i
+	num_2 = gets.chomp.to_f
 
 	case choice
 		when "addition"
 			total = num_1 + num_2
 			puts "Your result is #{total}"
-		when "subtraction"
+		when "substraction"
 		  	total = num_1 - num_2
 			puts "Your result is #{total}"
 		when "multiplication"
