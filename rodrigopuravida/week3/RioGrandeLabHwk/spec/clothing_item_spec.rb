@@ -84,6 +84,6 @@ describe ClothingItem do
       expect(@c4.inventory['S']).to eq(7)
     end 
   end
-  
+  # Check on the rest
 
 end
