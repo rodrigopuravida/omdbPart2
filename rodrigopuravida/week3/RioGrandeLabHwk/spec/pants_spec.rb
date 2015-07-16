@@ -23,7 +23,7 @@ describe Pants do
 
 	describe "Accessors" do
     it "should be able to get quantity" do
-      expect(@pants.quantity).to eq(0)
+      expect(@pants.inventory['S']).to eq(0)
     end
     it "should be able to get and set name" do
       @pants.name="New Name"
@@ -38,9 +38,53 @@ describe Pants do
       @pants.description="test"
       expect(@pants.description).to eq("test")
     end  
-    
+   end
 
+   describe "Functionality" do
+
+    it "should be able to retrieve array of sizes" do
+      expect(@pants.size.length()).to eq(4)
+    end  
+    it "should be able to retrieve first size is S" do
+      expect(@pants.size[0]).to eq('S')
+    end  
+    it "should be able to retrieve 2nd size is M" do
+      expect(@pants.size[1]).to eq('M')
+    end 
+    it "should be able to retrieve 3rd size is L" do
+      expect(@pants.size[2]).to eq('L')
+    end 
+    it "should be able to retrieve 4th size is XL" do
+      expect(@pants.size[3]).to eq('XL')
+    end 
+    it "should be able to stock based on size" do
+      @pants.stock 3, 'L'
+      expect(@pants.inventory['L']).to eq(3)
+    end 
+    it "should be able to retrieve quantity based on size" do
+      expect(@pants.quantity['L']).to eq(3)
+    end 
+    it "should be able to retrieve inventort hash if not size given" do
+      expect(@pants.inventory.length()).to eq(4)
+    end 
+    it "should be able to stock and stock to show the amount on that size" do
+      @c4 = Pants.new('Shirt',5.99)
+      @c4.stock 5, 'S'
+      expect(@c4.inventory['S']).to eq(5)
+    end 
+    it "should be able to sell and stock to show the amount diminished on that size" do
+      @c4 = Pants.new('Shirt',5.99)
+      @c4.stock 5, 'S'
+      @c4.sell 2, 'S'
+      expect(@c4.inventory['S']).to eq(3)
+    end 
+    it "should be able to return and stock to show the amount increased on that size" do
+      @c4 = Pants.new('Shirt',5.99)
+      @c4.stock 5, 'S'
+      @c4.return 2, 'S'
+      expect(@c4.inventory['S']).to eq(7)
+    end 
   end
-  
 
+  
 end

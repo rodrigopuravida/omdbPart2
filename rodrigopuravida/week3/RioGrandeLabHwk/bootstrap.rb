@@ -9,6 +9,9 @@ require './lib/DigitalItem'
 require './lib/EBook'
 require './lib/Movie'
 require './lib/Song'
+require './lib/ClothingItem'
+require './lib/Pants'
+require './lib/Shirt'
 
 pry.binding
 
