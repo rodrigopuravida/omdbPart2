@@ -1,3 +1,5 @@
+require_relative 'Item.rb'
+
 # You are on your own... good luck.
 class DigitalItem < Item
 

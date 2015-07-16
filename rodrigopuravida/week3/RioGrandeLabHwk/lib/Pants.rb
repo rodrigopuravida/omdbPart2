@@ -1,7 +1,7 @@
-# You are on your own... good luck.
-require_relative 'Book.rb'
+require_relative 'ClothingItem.rb'
 
-class EBook < Book
+class Pants < ClothingItem
+
 
 	attr_accessor :name, :price
 
@@ -9,5 +9,6 @@ class EBook < Book
         super(name,price)
 
     end
+
 
 end

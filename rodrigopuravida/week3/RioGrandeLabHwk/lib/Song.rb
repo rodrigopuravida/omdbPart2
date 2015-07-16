@@ -1,5 +1,5 @@
 # You are on your own... good luck.
-require_relative 'Item.rb'
+require_relative 'DigitalItem.rb'
 
 # CD < Item
 # Tracks (number of)

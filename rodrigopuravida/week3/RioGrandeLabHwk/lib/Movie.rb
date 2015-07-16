@@ -1,4 +1,6 @@
 # You are on your own... good luck.
+require_relative 'Bluray.rb'
+
 class Movie < Bluray
 
 	attr_accessor :name, :price

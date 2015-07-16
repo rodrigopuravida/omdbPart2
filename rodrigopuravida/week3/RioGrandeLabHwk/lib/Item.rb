@@ -9,6 +9,7 @@ class Item
         @description = ""
         @ship_price_per_oz = 1.2
         @weight = weight || 0
+        @inventory = Hash.new
     end
 
     def sell amount
