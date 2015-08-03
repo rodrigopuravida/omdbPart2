@@ -1,0 +1,1 @@
+var albums=[{name:"Gossamer",artist:"Passion Pit"},{name:"Sigh no more",artist:"Mumford and Sons"},{name:"Time to Pretend",artist:"MGMT"}],pluck=function(a,r){var n=[];for(i=0;i<a.length;i++)for(var t in a[i])t===r&&n.push(a[i][r]);return n},plucked=pluck(albums,"artist");console.log(plucked);
