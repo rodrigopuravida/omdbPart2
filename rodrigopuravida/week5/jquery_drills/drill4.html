@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>drill 4</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="js/drill4.js"></script>
+    </head>
+    <body>
+        <h1>jQuery Drill 4</h1>
+        <div class="wrapper">
+            <h3>Now for something completely different</h3>
+            <p>
+                Lets try something a little more practical. Try to do the following on this page.<br>
+                <ul class="task-list">
+                    <li>Hide the first div</li>
+                    <li>Hide the first list in the first div</li>
+                    <li>Hide the first list in the second div</li>
+                    <li>Hide the second div</li>
+                    <li>Hide the third item of the third list</li>
+                    <li>Hide the first item of the first list in the first div</li>
+                    <li>Set a red background on the first div</li>
+                    <li>Set a red background on the second list in the first div</li>
+                    <li>Set a red background on the second item of every list</li>
+                    <li>Fade out the second div after 5 seconds</li>
+                    <li>Remove the first item of every list from the DOM (no hiding)</li>
+                    <li>Add a fourth item to the second list in the first div</li>
+                    <li>Add a fourth item to all three lists (with one function call)</li>
+                    <li>Remove the second list from the first div and add it back to the second div</li>
+                    <li>Remove any element that is clicked on</li>
+                    <li>Remove any element in the first div that is clicked on</li>
+                    <li>Fade out any element that is clicked, after 3 seconds</li>
+                    <li><b>Bonus</b> make the list in the right column behave like <a href="http://itslenny.github.io/jquery-quiccordion/">this</a>.</li>
+                </ul>
+            </p>
+            <div class="stage">
+                <div id='first'>
+                    <ul class='first'>
+                        <li class='first'>First item</li>
+                        <li class='second'>Second item</li>
+                        <li class='third'>Third Item</li>
+                    </ul>
+                    <ul class='second'>
+                        <li class='first'>Second first item</li>
+                        <li class='second'>Second second item</li>
+                        <li class='third'>Second third item</li>
+                    </ul>
+                </div>
+                <div id='second'>
+                    <ul class='first'>
+                        <li class='first'>Third First item
+                            <ul>
+                                <li>sub item 1.1</li>
+                                <li>sub item 1.2</li>
+                                <li>sub item 1.3</li>
+                            </ul>
+                        </li>
+                        <li class='second'>Third Second item
+                            <ul>
+                                <li>sub item 2.1</li>
+                                <li>sub item 2.2</li>
+                                <li>sub item 2.3</li>
+                            </ul>
+                        </li>
+                        <li class='third'>Third Third Item
+                            <ul>
+                                <li>sub item 3.1</li>
+                                <li>sub item 3.2</li>
+                                <li>sub item 3.3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

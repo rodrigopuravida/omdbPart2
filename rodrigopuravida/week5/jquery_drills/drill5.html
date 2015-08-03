@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>drill 5</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="js/drill5.js"></script>
+    </head>
+    <body>
+        <h1>jQuery Drill 5</h1>
+        <div class="wrapper">
+            <h3>CHANGE ALL THE THINGS!!!</h3>
+            <p>
+                The user should be able to select a type of object from the first dropdown (below) and then select a way to modify all matching items from the second dropdown. When they click the "Do it!" button the transformation should be performed. The "shuffle shapes" button has already been completed for you.
+                <br><br>
+                <b>Concepts used:</b> $.on(), $.fadeOut(), $.fadeIn(), $.width(), $.height(), $.css(), $.position(), $.addClass, $.removeClass, $.each(), <a href="http://api.jquery.com/category/selectors/">:selectors</a>, maybe some other stuff.
+                <br><br>
+                <b>Bonus:</b> add some more items to the lists and make them work.
+            </p>
+            <p>
+                Find all &nbsp; 
+                <select id="whoDo">
+                    <option value=""> - Select One - </option>
+                    <option value="even">Even numbed items</option>
+                    <option value="odd">Odd numbered items</option>
+                    <option value="square">Squares</option>
+                    <option value="circle">Circles</option>
+                    <option value="blue">Blue items</option>
+                    <option value="red">Red items</option>
+                    <option value="purple">Purple items</option>
+                    <option value="orange">Orange items</option>
+                    <option value="yellow">Yellow items</option>
+                </select> &nbsp; 
+                and &nbsp; 
+                <select id="whatDo">
+                    <option value=""> - Select One - </option>
+                    <option value="blue">make them blue</option>
+                    <option value="red">make them red</option>
+                    <option value="purple">make them purple</option>
+                    <option value="orange">make them orange</option>
+                    <option value="yellow">make them yellow</option>
+                    <option value="square">Change them in to squares</option>
+                    <option value="circle">Change them in to circles</option>
+                    <option value="fadein">Fade out</option>
+                    <option value="fadeout">Fade in</option>
+                </select> &nbsp; 
+                <button id="doIt">Do it!</button>
+                &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+                <button id="shuffleThem">Shuffle Shapes</button>
+            </p>
+            <div class="stage">
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape ball"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>
