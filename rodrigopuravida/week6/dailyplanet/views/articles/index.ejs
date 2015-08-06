@@ -1,0 +1,13 @@
+<% include ../shared/header.ejs %>
+  <a href="/articles/new" class="btn btn-default pull-right margin-top">Create a new Article</a>
+  <h1 class="white-text">These are my Articles</h1>
+  <% myArticle.forEach(function(article, index) { %>
+  <div class="well">
+    <a href="/articles/<%= index %>" class="btn btn-danger glyphicon glyphicon-trash pull-right delete-article"></a>
+    <h2><a href="/articles/<%= index %>"> <%= article.title %> </a></h2>
+  </div>
+  <% }); %>
+
+<% include ../shared/footer.ejs %>
+
+
