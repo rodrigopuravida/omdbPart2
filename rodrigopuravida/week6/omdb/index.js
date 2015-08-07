@@ -9,6 +9,10 @@ app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/movies", moviesController);
 
+// used for static files, like css
+app.use(express.static(__dirname + '/public'));
+app.use(ejsLayouts);
+
 
 app.get("/", function(req, res){
   res.render("index");
@@ -18,3 +22,7 @@ app.get("/", function(req, res){
 
 
 app.listen(3000);
+
+
+
+
