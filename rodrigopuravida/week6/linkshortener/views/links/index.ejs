@@ -1,0 +1,20 @@
+<h1>Shortened links</h1>
+
+<a href="/links/new" class="btn btn-success">New Shorty link</a>
+
+
+
+<% allLinks.forEach(function(link, index) { %>
+<div class="well">
+  <h2><a href="/links/<%= index %>"><%= link.link %></a></h2>
+</div>
+<% }); %>
+
+
+
+
+
+
+
+
+
