@@ -5,6 +5,9 @@ var bodyParser = require('body-parser');
 var Hashids = require("hashids");
 var db = require("./models");
 
+// express helpers, used for link_to
+require('express-helpers')(app);
+
 app.set("view engine", "ejs");
 app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({extended: true}));
@@ -12,12 +15,10 @@ app.use(express.static(__dirname + '/public'));
 
 function Link(link, shortLink) {
   this.link = link;
-  this.shortLink - shortLink;
+  this.shortLink = shortLink;
 }
 
-function UpdateWithHash() {
 
-}
 var links = [];
 
 app.get("/", function(req, res) {
@@ -34,7 +35,8 @@ app.get("/links", function(req, res) {
 
   //get all entries from BD
   db.link.findAll().then(function(link) {
-  console.log(link[0]["dataValues"]["url"]);
+    console.log(link);
+  // console.log(link[0]["dataValues"]["url"]);
   // users will be an array of all User instances
   res.render('links/index', {
       allLinks: link
@@ -43,8 +45,6 @@ app.get("/links", function(req, res) {
   });
 
 });
-
-
 
 
 app.get("/links/new", function(req, res) {
@@ -98,8 +98,15 @@ app.get("/links/:index", function(req, res) {
 
 app.get("/:hash", function(req, res) {
 
-  console.console.log('Where is my hash');
-  res.redirect('/links/url');
+  console.log('Made to launch the rocket');
+  console.log(req.body);
+
+  db.link.find({ where: { hash: req.params.encodedLink.hash.toString() } }).then(function(link) {
+    console.log('Launching');
+
+  // user will be an instance of User and stores the content of the table entry with id 1. if such an entry is not defined you will get null
+  res.render(link.url);
+  });
 
 });
 
