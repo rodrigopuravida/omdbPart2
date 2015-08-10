@@ -87,20 +87,14 @@ app.post("/links", function(req, res) {
 
 app.get("/links/:index", function(req, res) {
 
-  //find and show the encode url
-  db.link.find(index).then(function(link) {
-    res.send(link.hash);
-  //res.render('links/show', {link: link.hash});
+   db.link.find({ where: { id: req.params.index.toString() } }).then(function(link) {
+  // user will be an instance of User and stores the content of the table entry with id 1. if such an entry is not defined you will get null
+  res.render('links/show', {encodedLink: link});
+  });
+
 });
 
 
-
-  if (req.params.index < links.length) {
-    res.render('links/show', {link: links[req.params.index]});
-  } else {
-    res.send('What up.. messed up here');
-  }
-});
 
 app.get("/:hash", function(req, res) {
 
