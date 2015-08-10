@@ -101,11 +101,12 @@ app.get("/:hash", function(req, res) {
   console.log('Made to launch the rocket');
   console.log(req.body);
 
-  db.link.find({ where: { hash: req.params.encodedLink.hash.toString() } }).then(function(link) {
-    console.log('Launching');
+  db.link.find({ where: { hash: req.params.hash.toString() } }).then(function(link) {
+    console.log(link.hash);
+  console.log('Launching');
 
   // user will be an instance of User and stores the content of the table entry with id 1. if such an entry is not defined you will get null
-  res.render(link.url);
+  // res.render(link.url);
   });
 
 });
