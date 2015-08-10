@@ -112,7 +112,7 @@ app.get("/:hash", function(req, res) {
 
 app.listen(3000);
 
-
+//test
 // http://localhost:3000/link/www.cnn.com/lola897
 // http://localhost:3000/link/get/1
 
