@@ -6,7 +6,7 @@
 
 <% allLinks.forEach(function(link, index) { %>
 <div class="well">
-  <h2><a href="/links/<%= index %>"><%= link.link %></a></h2>
+  <h2><a href="/links/<%= index %>"><%= link.link %><%= link.shortLink %></a></h2>
 </div>
 <% }); %>
 

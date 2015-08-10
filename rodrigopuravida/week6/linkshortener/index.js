@@ -50,34 +50,12 @@ app.get("/links/:index", function(req, res) {
   }
 });
 
-// app.get("/articles/:index/edit", function(req, res) {
-//   if (req.params.index < articles.length) {
-//     res.render('articles/edit', {article: articles[req.params.index],
-//                                  index: req.params.index});
-//   } else {
-//     res.send('Error, please try a correct page');
-//   }
-// });
+app.get("/:hash", function(req, res) {
 
-// app.post("/articles/:index", function(req, res) {
-//   // res.send(req.body);
-//   articles.splice(req.params.index, 1, new Article(req.body.title, req.body.body));
-//   res.redirect("/articles");
-// });
+  console.console.log('Where is my hash');
+  res.redirect('/links/url');
 
-// app.get("/about", function(req, res) {
-//   res.render("site/about");
-// });
-
-// app.get("/contact", function(req, res) {
-//   res.render("site/contact");
-// });
-
-// app.delete("/articles/:index", function(req, res) {
-//   articles.splice(req.params.index, 1);
-//   res.send({msg: "Success!"});
-// });
-
+});
 
 app.listen(3000);
 
