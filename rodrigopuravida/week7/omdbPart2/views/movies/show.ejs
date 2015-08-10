@@ -1,0 +1,21 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= movieContents.Title %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 col-md-4" style="background-color:lavenderblush;">
+        <img class="movie_image" src=<%= movieContents.Poster %>>
+      </div>
+          <div class="col-sm-3 col-md-8" style="background-color:lavender;">
+            <p><b>Description: </b><%= movieContents.Plot %></p>
+            <p><b>IMDB Rating: </b><%= rating %></p>
+            <!-- <img class="star_image" src=<%= "/images/star.jpg" %>> -->
+            <p><b>Rotten Tomatoe Rating: </b><%= movieContents.tomatoRating %></p>
+           </div>
+    </div>
+  </div>
+  </div>
+</div>
